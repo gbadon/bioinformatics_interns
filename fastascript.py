@@ -10,6 +10,7 @@ import random
 nuc_list= ["A","T","C","G"]
 
 def repeat_seq(length):
+#function that makes random seq od nucleotides in a specific range
     your_letters='ATCG'
     return ''.join((random.choice(your_letters) for i in range(length)))
 
@@ -20,6 +21,7 @@ repeat_seq4=repeat_seq(30)
 repeat_seq5=repeat_seq(30)
 
 def new_fasta(): 
+#try block is skipping error and makes the code continue on with what it can
 	try:
 		with open("psuedo_protein.fasta",w) as in_handle:
 			in_handle.write(repeat_seq1, repeat_seq2, repeat_seq3, repeat_seq4, repeat_seq5)
